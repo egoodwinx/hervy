@@ -1,0 +1,8 @@
+{
+  "appId": "com.capstone",
+  "appName": "com.capstone",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
