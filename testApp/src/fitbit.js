@@ -70,11 +70,15 @@ export function GetHeartRate(currentDateTime, callback)
 *   callback - the callback function to call with the results
 * Return:       Calls the callback function with the results.
 */
-function fitbitHandler(result, callback) {
+function fitbitHandler(result, callback, date = null) {
     var parsedHeartRateValues = {
         date:new Date(),
         heartRateValues:[]
     };
+
+    if (date !== null) {
+        parsedHeartRateValues.date = date;
+    }
 
     var ret = {
         error:true,
@@ -139,7 +143,7 @@ export function GetHeartRateDataByDate(currentDateTime, callback) {
             // get the heart rate for the current user for today & activity level for the last minute 
             //GET https://api.fitbit.com/1/user/-/activities/heart/date/today/1m.json
             client.get("/activities/heart/date/"+ formattedDate + "/1d/1sec/time/00:00/23:59.json", sessionStorage.getItem("fitbitToken"))
-            .then(results => {fitbitHandler(results, callback)});
+            .then(results => {fitbitHandler(results, callback, currentDateTime)});
         }
     }
 }

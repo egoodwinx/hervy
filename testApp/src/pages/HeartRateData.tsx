@@ -82,7 +82,7 @@ import { IonContent, IonHeader, IonPage,
         if (!isNullOrUndefined(heartRateValues)) {
           var lastHeartRate = heartRateValues["heartRateValues"][heartRateValues["heartRateValues"].length - 1]
           if (!isNullOrUndefined(lastHeartRate)) {
-            getAnxietyTimes(new Date(Date.now()), this.updateAnxietyList);
+            getAnxietyTimes(new Date(this.state.selectedDate), this.updateAnxietyList);
           }
           if (heartRateValues.heartRateValues.length > 0){ 
             var tempState = this.state.chartData;
