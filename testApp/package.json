@@ -6,7 +6,7 @@
     "@capacitor/core": "^1.5.0",
     "@ionic/react": "^5.0.1",
     "@ionic/react-router": "^5.0.7",
-    "@okta/jwt-verifier": "^1.0.0",
+    "@okta/jwt-verifier": "^4.0.2",
     "@okta/okta-react": "^1.4.0",
     "@okta/okta-signin-widget": "^3.7.1",
     "@remotelock/react-week-scheduler": "^3.5.8",
